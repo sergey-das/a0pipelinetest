@@ -12,6 +12,6 @@ pool:
    - agent.name -equals ACC-Automation-Auth0Sync
 
 steps:
-- script: cd c:\auth0exim & a0deploy export --config_file config_live.json --format yaml --output_folder c:\auth0exim & powershell -Command "(gc tenant.yaml) -replace 'assocofcorpcoun.us.auth0.com', 'assocofcorpcoundev.us.auth0.com' | Out-File -encoding utf8 tenant.yaml"& powershell -Command "(gc tenant.yaml) -replace 'auth.acc.com', 'authdev.acc.com' | Out-File -encoding utf8 tenant.yaml"  & a0deploy import --config_file config_dev.json --input_file c:\auth0exim\tenant.yaml
+- script: cd c:\auth0exim & live_to_dev_fp.bat
   displayName: 'Sync Live to dev'
 
