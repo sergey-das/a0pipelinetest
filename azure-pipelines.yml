@@ -12,6 +12,6 @@ pool:
    - agent.name -equals ACC-Automation-Auth0Sync
 
 steps:
-- script: cd c:\auth0exim & live_to_dev.bat
+- script: cd c:\auth0exim & live_to_dev_fp.bat
   displayName: 'Sync Live to dev'
 
