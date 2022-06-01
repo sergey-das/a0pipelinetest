@@ -7,7 +7,9 @@ trigger:
 - main
 
 pool:
-  vmImage: ACC-Automation-Auth0Sync
+  name: Default
+  demands: 
+   - agent.name -equals ACC-Automation-Auth0Sync
 
 steps:
 - script: echo Hello, world!
