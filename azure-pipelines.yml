@@ -12,6 +12,6 @@ pool:
    - agent.name -equals ACC-Automation-Auth0Sync
 
 steps:
-- script: cd c:\testf echo Hello, world! > testfile.txt
+- script: cd c:\testf & echo "Hello, world!" > testfile.txt
   displayName: 'Run a one-line script'
 
